@@ -7,8 +7,77 @@
              x:Class="QLDTMobile.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+        <StackLayout Spacing="14" Padding="48,0,48,0" VerticalOptions="CenterAndExpand">
+            <StackLayout HeightRequest="80" VerticalOptions="Center" Spacing="0" >
+                <Label Text="Login / User Name" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontFamily="FS-Regular" TextColor="Blue"/>
+                <Entry Text="{Binding Username}" AutomationId="username" Placeholder="Enter your login / user name" />
+            </StackLayout>
+            <StackLayout HeightRequest="80" VerticalOptions="Center" Spacing="0" >
+                <Label Text="Password" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontFamily="FS-Regular" TextColor="Blue"/>
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Spacing="0" VerticalOptions="FillAndExpand">
+                    <Entry Text="{Binding Password}" x:Name="PasswordEntry" AutomationId="password" HorizontalOptions="FillAndExpand" IsPassword="True" Placeholder="Enter your password" />
+                </StackLayout>
+            </StackLayout>
+            <!--<StackLayout HeightRequest="80" VerticalOptions="Center" Spacing="8" Orientation="Horizontal">
+                            <CheckBox ScaleX="2" ScaleY="2" Color="{StaticResource MediumDarkBlue}"/>
+                            <Label Text="Remember Me" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontFamily="FS-Regular" TextColor="{StaticResource MediumDarkBlue}"/>
+                        </StackLayout>-->
+
+            <!--<Button AutomationId="loginBtn" Command="{Binding LoginCommand}" Text="LOG IN"  Style="{StaticResource ActiveButton}" VerticalOptions="Center" />-->
+
+            <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+                <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+            </StackLayout>
         </StackLayout>
+        
+        
+        
+        <!--<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                --><!--<StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+                    <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+                </StackLayout>--><!--
+
+                <StackLayout Padding="0" AbsoluteLayout.LayoutBounds="0,0,1,1" HorizontalOptions="FillAndExpand" Spacing="0" VerticalOptions="FillAndExpand">
+                    --><!--<ContentView ControlTemplate="{StaticResource LoginHeader}" />--><!--
+
+                    <StackLayout Spacing="14" Padding="48,0,48,0" VerticalOptions="CenterAndExpand">
+                        <StackLayout HeightRequest="80" VerticalOptions="Center" Spacing="0" >
+                            <Label Text="Login / User Name" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontFamily="FS-Regular" TextColor="AliceBlue"/>
+                            <Entry Text="{Binding Username}" AutomationId="username" Placeholder="Enter your login / user name" />
+                        </StackLayout>
+                        <StackLayout HeightRequest="80" VerticalOptions="Center" Spacing="0" >
+                            <Label Text="Password" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontFamily="FS-Regular" TextColor="AliceBlue"/>
+                            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Spacing="0" VerticalOptions="FillAndExpand">
+                                <Entry Text="{Binding Password}" x:Name="PasswordEntry" AutomationId="password" HorizontalOptions="FillAndExpand" IsPassword="True" Placeholder="Enter your password" />
+                            </StackLayout>
+                        </StackLayout>
+                        --><!--<StackLayout HeightRequest="80" VerticalOptions="Center" Spacing="8" Orientation="Horizontal">
+                            <CheckBox ScaleX="2" ScaleY="2" Color="{StaticResource MediumDarkBlue}"/>
+                            <Label Text="Remember Me" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontFamily="FS-Regular" TextColor="{StaticResource MediumDarkBlue}"/>
+                        </StackLayout>-->
+
+                        <!--<Button AutomationId="loginBtn" Command="{Binding LoginCommand}" Text="LOG IN"  Style="{StaticResource ActiveButton}" VerticalOptions="Center" />--><!--
+                        
+                        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+                            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    --><!--<StackLayout Padding="16,0,16,10" VerticalOptions="End" Spacing="0">
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="Forgot Password" HorizontalTextAlignment="End" FontSize="18" FontFamily="FS-Regular" TextColor="{StaticResource MediumLightBlue}" TextDecorations="Underline" VerticalTextAlignment="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}" NumberOfTapsRequired="1" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+
+                        --><!--<ContentView ControlTemplate="{StaticResource LoginFooter}" />--><!--
+                    </StackLayout>--><!--
+                </StackLayout>
+            </AbsoluteLayout>
+        </ScrollView>-->
     </ContentPage.Content>
 </ContentPage>
